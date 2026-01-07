@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/real-state_neutra/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neutra Bienes Raices Demo</title>
+    <script type="module" crossorigin src="/real-state_neutra/assets/index-6lVMSm0V.js"></script>
+    <link rel="stylesheet" crossorigin href="/real-state_neutra/assets/index-LdaU5xNv.css">
+  </head>
+<body class="m-0 p-0 w-full overflow-x-hidden">
+    <nav class="fixed w-full z-50 px-6 py-6 md:px-12 flex justify-between items-center text-white transition-all duration-300">
+        
+        <a href="#" id="brand" class="text-2xl font-light italic tracking-tight uppercase z-50 relative">VANGUARD XLP</a>
+
+        <ul class="hidden lg:flex gap-10 text-xs tracking-widest uppercase font-bold">
+            <li>
+                <a href="#properties" class="hover:text-neutral-300 transition-colors relative group">
+                    Propiedades
+                    <span class="absolute -bottom-2 left-0 w-0 h-[1px] bg-white transition-all duration-300 group-hover:w-full"></span>
+                </a>
+            </li>
+            <li>
+                <a href="#valuacion" class="hover:text-neutral-300 transition-colors relative group">
+                    Valuación
+                    <span class="absolute -bottom-2 left-0 w-0 h-[1px] bg-white transition-all duration-300 group-hover:w-full"></span>
+                </a>
+            </li>
+            <li>
+                <a href="#contact" class="hover:text-neutral-300 transition-colors relative group">
+                    Contacto
+                    <span class="absolute -bottom-2 left-0 w-0 h-[1px] bg-white transition-all duration-300 group-hover:w-full"></span>
+                </a>
+            </li>
+        </ul>
+
+        <button id="menu-btn" class="lg:hidden z-50 flex flex-col gap-1.5 group">
+            <span id="line1" class="w-8 h-[2px] bg-white transition-transform duration-300"></span>
+            <span id="line2" class="w-8 h-[2px] bg-white transition-opacity duration-300"></span>
+            <span id="line3" class="w-8 h-[2px] bg-white transition-transform duration-300"></span>
+        </button>
+
+        <div id="mobile-menu" class="fixed inset-0 bg-black text-white flex flex-col justify-center items-center opacity-0 invisible menu-overlay transition-all duration-500 lg:hidden">
+            <ul class="text-center space-y-8">
+                <li class="overflow-hidden">
+                    <a href="#properties" class="menu-link block text-4xl font-serif italic hover:text-neutral-400 transition-colors translate-y-10 opacity-0 transition-all duration-500 delay-100">Propiedades</a>
+                </li>
+                <li class="overflow-hidden">
+                    <a href="#about" class="menu-link block text-4xl font-serif italic hover:text-neutral-400 transition-colors translate-y-10 opacity-0 transition-all duration-500 delay-200">Valuación</a>
+                </li>
+                <li class="overflow-hidden">
+                    <a href="#contact" class="menu-link block text-4xl font-serif italic hover:text-neutral-400 transition-colors translate-y-10 opacity-0 transition-all duration-500 delay-300">Contacto</a>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+
+    <header class="relative w-full h-screen overflow-hidden bg-gray-900 animate-ken-burns">
+        <img src="/real-state_neutra/assets/bg_realstate-nMMdeX4R.png" 
+             class="absolute inset-0 w-full h-full object-cover opacity-60" alt="Luxury House">
+        
+        <div class="relative z-10 h-full flex flex-col justify-center items-center text-center text-white px-4">
+            <p class="text-xs md:text-sm font-bold tracking-[0.3em] uppercase mb-4 animate-fade-up">Encontremos juntos tu nuevo hogar</p>
+            <h1 class="text-5xl md:text-8xl font-serif italic leading-tight mb-8">
+                Tu próximo gran paso.</h1>
+            <a href="#properties" class="border border-white/30 px-8 py-3 text-xs tracking-widest hover:bg-white hover:text-black transition-all duration-300 uppercase">
+                Ver Colección
+            </a>
+        </div>
+    </header>
+
+  <section id="properties" class="py-20 md:py-32 bg-white">
+    <div class="px-6 md:px-12 mb-12">
+        <div class="flex flex-col md:flex-row justify-between md:items-start lg:items-center gap-8">
+            <div>
+                <h2 class="text-4xl font-serif text-neutral-900 mb-2">Para ti y para tu familia</h2>
+                <p class="text-neutral-500 text-sm tracking-wide uppercase">Ven a conocer</p>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row self-center gap-2 overflow-x-auto no-scrollbar md:pb-2">
+                <button class="filter-btn active px-6 py-2 text-xs uppercase tracking-widest border border-black bg-black text-white transition-all" data-filter="all">Todo</button>
+                <button class="filter-btn px-6 py-2 text-xs uppercase tracking-widest border border-neutral-200 hover:border-black transition-all" data-filter="house">Casas</button>
+                <button class="filter-btn px-6 py-2 text-xs uppercase tracking-widest border border-neutral-200 hover:border-black transition-all" data-filter="apartment">Deptos</button>
+                <button class="filter-btn px-6 py-2 text-xs uppercase tracking-widest border border-neutral-200 hover:border-black transition-all" data-filter="land">Terrenos</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex overflow-x-auto gap-8 px-6 md:px-12 pb-10 no-scrollbar snap-x snap-mandatory" id="property-grid">
+        
+        <article class="property-card snap-center shrink-0 w-[85vw] md:w-[500px] group cursor-pointer transition-all duration-500" data-category="house">
+            <div class="w-full h-[500px] overflow-hidden rounded-sm mb-6 relative">
+                <img src="/real-state_neutra/assets/casa-BPrypQC6.png" class="w-full h-full object-cover img-zoom" alt="House">
+                <div class="absolute top-4 right-4 bg-white/90 px-3 py-1 text-[10px] tracking-widest uppercase font-bold">Casa</div>
+            </div>
+            <div class="flex justify-between items-start">
+                <div>
+                    <h3 class="text-2xl font-serif italic text-neutral-900">Monte Magno</h3>
+                    <p class="text-neutral-500 text-xs uppercase tracking-wide">Xalapa, Ver</p>
+                </div>
+                <p class="text-lg font-medium">$8,500,000</p>
+            </div>
+        </article>
+                <article class="property-card snap-center shrink-0 w-[85vw] md:w-[500px] group cursor-pointer transition-all duration-500" data-category="house">
+            <div class="w-full h-[500px] overflow-hidden rounded-sm mb-6 relative">
+                <img src="/real-state_neutra/assets/casa2-DCFzsbrK.png" class="w-full h-full object-cover img-zoom" alt="House">
+                <div class="absolute top-4 right-4 bg-white/90 px-3 py-1 text-[10px] tracking-widest uppercase font-bold">Casa</div>
+            </div>
+            <div class="flex justify-between items-start">
+                <div>
+                    <h3 class="text-2xl font-serif italic text-neutral-900">Monte Magno</h3>
+                    <p class="text-neutral-500 text-xs uppercase tracking-wide">Xalapa, Ver</p>
+                </div>
+                <p class="text-lg font-medium">$5,000,000</p>
+            </div>
+        </article>
+                <article class="property-card snap-center shrink-0 w-[85vw] md:w-[500px] group cursor-pointer transition-all duration-500" data-category="house">
+            <div class="w-full h-[500px] overflow-hidden rounded-sm mb-6 relative">
+                <img src="/real-state_neutra/assets/casa3-BC5GujA5.png" class="w-full h-full object-cover img-zoom" alt="House">
+                <div class="absolute top-4 right-4 bg-white/90 px-3 py-1 text-[10px] tracking-widest uppercase font-bold">Casa</div>
+            </div>
+            <div class="flex justify-between items-start">
+                <div>
+                    <h3 class="text-2xl font-serif italic text-neutral-900">Las Ánimas</h3>
+                    <p class="text-neutral-500 text-xs uppercase tracking-wide">Xalapa, Ver</p>
+                </div>
+                <p class="text-lg font-medium">$6,500,000</p>
+            </div>
+        </article>
+                <article class="property-card snap-center shrink-0 w-[85vw] md:w-[500px] group cursor-pointer transition-all duration-500" data-category="house">
+            <div class="w-full h-[500px] overflow-hidden rounded-sm mb-6 relative">
+                <img src="/real-state_neutra/assets/casa4-3h93vNKu.png" class="w-full h-full object-cover img-zoom" alt="House">
+                <div class="absolute top-4 right-4 bg-white/90 px-3 py-1 text-[10px] tracking-widest uppercase font-bold">Casa</div>
+            </div>
+            <div class="flex justify-between items-start">
+                <div>
+                    <h3 class="text-2xl font-serif italic text-neutral-900">La Trinidad</h3>
+                    <p class="text-neutral-500 text-xs uppercase tracking-wide">Coatepec, Ver</p>
+                </div>
+                <p class="text-lg font-medium">$4,500,000</p>
+            </div>
+        </article>
+
+        <article class="property-card snap-center shrink-0 w-[85vw] md:w-[500px] group cursor-pointer transition-all duration-500" data-category="apartment">
+            <div class="w-full h-[500px] overflow-hidden rounded-sm mb-6 relative">
+                <img src="/real-state_neutra/assets/depto-BCt-xyq2.png" class="w-full h-full object-cover img-zoom" alt="Apt">
+                <div class="absolute top-4 right-4 bg-white/90 px-3 py-1 text-[10px] tracking-widest uppercase font-bold">Depto</div>
+            </div>
+            <div class="flex justify-between items-start">
+                <div>
+                    <h3 class="text-2xl font-serif italic text-neutral-900">Las Ánimas</h3>
+                    <p class="text-neutral-500 text-xs uppercase tracking-wide">Xalapa, Ver</p>
+                </div>
+                <p class="text-lg font-medium">$4,200,000</p>
+            </div>
+        </article>
+
+        <article class="property-card snap-center shrink-0 w-[85vw] md:w-[500px] group cursor-pointer transition-all duration-500" data-category="apartment">
+            <div class="w-full h-[500px] overflow-hidden rounded-sm mb-6 relative">
+                <img src="/real-state_neutra/assets/depto2-HCNNMI05.png" class="w-full h-full object-cover img-zoom" alt="Apt">
+                <div class="absolute top-4 right-4 bg-white/90 px-3 py-1 text-[10px] tracking-widest uppercase font-bold">Depto</div>
+            </div>
+            <div class="flex justify-between items-start">
+                <div>
+                    <h3 class="text-2xl font-serif italic text-neutral-900">Coatepec Centro</h3>
+                    <p class="text-neutral-500 text-xs uppercase tracking-wide">Coatepec, Ver</p>
+                </div>
+                <p class="text-lg font-medium">$4,200,000</p>
+            </div>
+        </article>
+                <article class="property-card snap-center shrink-0 w-[85vw] md:w-[500px] group cursor-pointer transition-all duration-500" data-category="apartment">
+            <div class="w-full h-[500px] overflow-hidden rounded-sm mb-6 relative">
+                <img src="/real-state_neutra/assets/depto3-DJr_Dse5.png" class="w-full h-full object-cover img-zoom" alt="Apt">
+                <div class="absolute top-4 right-4 bg-white/90 px-3 py-1 text-[10px] tracking-widest uppercase font-bold">Depto</div>
+            </div>
+            <div class="flex justify-between items-start">
+                <div>
+                    <h3 class="text-2xl font-serif italic text-neutral-900">Araucarias</h3>
+                    <p class="text-neutral-500 text-xs uppercase tracking-wide">Xalapa, Ver</p>
+                </div>
+                <p class="text-lg font-medium">$4,200,000</p>
+            </div>
+        </article>
+        <article class="property-card snap-center shrink-0 w-[85vw] md:w-[500px] group cursor-pointer transition-all duration-500" data-category="apartment">
+            <div class="w-full h-[500px] overflow-hidden rounded-sm mb-6 relative">
+                <img src="/real-state_neutra/assets/depto4-Bu7c8Psz.png" class="w-full h-full object-cover img-zoom" alt="Apt">
+                <div class="absolute top-4 right-4 bg-white/90 px-3 py-1 text-[10px] tracking-widest uppercase font-bold">Depto</div>
+            </div>
+            <div class="flex justify-between items-start">
+                <div>
+                    <h3 class="text-2xl font-serif italic text-neutral-900">Monte Magno</h3>
+                    <p class="text-neutral-500 text-xs uppercase tracking-wide">Xalapa, Ver</p>
+                </div>
+                <p class="text-lg font-medium">$4,200,000</p>
+            </div>
+        </article>
+
+
+        <article class="property-card snap-center shrink-0 w-[85vw] md:w-[500px] group cursor-pointer transition-all duration-500" data-category="land">
+            <div class="w-full h-[500px] overflow-hidden rounded-sm mb-6 relative">
+                <img src="/real-state_neutra/assets/lote3-BygrU4l0.png" class="w-full h-full object-cover img-zoom" alt="Land">
+                <div class="absolute top-4 right-4 bg-white/90 px-3 py-1 text-[10px] tracking-widest uppercase font-bold">Terreno</div>
+            </div>
+            <div class="flex justify-between items-start">
+                <div>
+                    <h3 class="text-2xl font-serif italic text-neutral-900">Lote Residencial</h3>
+                    <p class="text-neutral-500 text-xs uppercase tracking-wide">El Lencero, Ver</p>
+                </div>
+                <p class="text-lg font-medium">$2,800,000</p>
+            </div>
+        </article>
+
+        <article class="property-card snap-center shrink-0 w-[85vw] md:w-[500px] group cursor-pointer transition-all duration-500" data-category="land">
+            <div class="w-full h-[500px] overflow-hidden rounded-sm mb-6 relative">
+                <img src="/real-state_neutra/assets/lote-BjpzIg1j.png" class="w-full h-full object-cover img-zoom" alt="Land">
+                <div class="absolute top-4 right-4 bg-white/90 px-3 py-1 text-[10px] tracking-widest uppercase font-bold">Terreno</div>
+            </div>
+            <div class="flex justify-between items-start">
+                <div>
+                    <h3 class="text-2xl font-serif italic text-neutral-900">Lote Residencial</h3>
+                    <p class="text-neutral-500 text-xs uppercase tracking-wide">Coapexpan, Xalapa</p>
+                </div>
+                <p class="text-lg font-medium">$2,800,000</p>
+            </div>
+        </article>
+
+        <article class="property-card snap-center shrink-0 w-[85vw] md:w-[500px] group cursor-pointer transition-all duration-500" data-category="land">
+            <div class="w-full h-[500px] overflow-hidden rounded-sm mb-6 relative">
+                <img src="/real-state_neutra/assets/lote2-Cc1kxfR4.png" class="w-full h-full object-cover img-zoom" alt="Land">
+                <div class="absolute top-4 right-4 bg-white/90 px-3 py-1 text-[10px] tracking-widest uppercase font-bold">Terreno</div>
+            </div>
+            <div class="flex justify-between items-start">
+                <div>
+                    <h3 class="text-2xl font-serif italic text-neutral-900">Lote Residencial</h3>
+                    <p class="text-neutral-500 text-xs uppercase tracking-wide">Briones, Coatepec</p>
+                </div>
+                <p class="text-lg font-medium">$2,800,000</p>
+            </div>
+        </article>
+
+    </div>
+  </section>
+
+<section id="valuacion" class="py-20 bg-neutral-900 text-white">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 grid md:grid-cols-2 gap-16 items-center">
+        
+        <div>
+            <h2 class="text-4xl md:text-5xl font-serif italic mb-6">Valuación Inteligente</h2>
+            <p class="text-neutral-400 mb-8 font-light leading-relaxed">
+                Nuestro algoritmo utiliza datos de mercado en tiempo real de la zona de Veracruz para estimar el valor comercial de su propiedad.
+            </p>
+            
+            <div class="grid grid-cols-2 gap-8 border-t border-white/10 pt-8">
+                <div>
+                    <p class="text-3xl font-serif text-white mb-1">+120</p>
+                    <p class="text-xs uppercase tracking-widest text-neutral-500">Valuaciones este mes</p>
+                </div>
+                <div>
+                    <p class="text-3xl font-serif text-white mb-1">98%</p>
+                    <p class="text-xs uppercase tracking-widest text-neutral-500">Precisión de mercado</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white text-black p-8 rounded-sm shadow-2xl">
+            <h3 class="text-xl font-bold uppercase tracking-widest mb-6">Estimador de Valor</h3>
+            
+            <div class="space-y-6">
+                <div>
+                    <label class="block text-xs uppercase tracking-wide text-neutral-500 mb-2">Zona</label>
+                    <select id="calc-zone" class="w-full border-b border-neutral-300 py-2 bg-transparent focus:outline-none focus:border-black transition-colors">
+                        <option value="25000">Las Ánimas ($25k/m²)</option>
+                        <option value="18000">Monte Magno ($18k/m²)</option>
+                        <option value="12000">Coatepec ($12k/m²)</option>
+                        <option value="8000">Xalapa Centro ($8k/m²)</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-xs uppercase tracking-wide text-neutral-500 mb-2">Superficie (m²)</label>
+                    <input type="number" id="calc-size" value="150" class="w-full border-b border-neutral-300 py-2 focus:outline-none focus:border-black transition-colors" placeholder="Ej. 150">
+                </div>
+
+                <div class="bg-neutral-100 p-6 mt-8 text-center">
+                    <p class="text-xs uppercase tracking-widest text-neutral-500 mb-2">Valor Estimado</p>
+                    <p id="calc-result" class="text-3xl md:text-4xl font-serif font-bold text-neutral-900">$3,750,000</p>
+                    <p class="text-[10px] text-neutral-400 mt-2">*Estimación aproximada. Agende una cita para avalúo oficial.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+  <section id="contact" class="py-20 md:py-32 bg-white px-6 md:px-12">
+    <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-serif text-neutral-900 mb-2">Inicia la Conversación</h2>
+            <p class="text-neutral-500 text-sm tracking-wide">Te ayudamos a encontrar lo mejor para ti y para tu familia.</p>
+        </div>
+
+        <form class="space-y-12">
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="relative">
+                    <input type="text" id="name" class="peer w-full border-b border-neutral-300 py-2 focus:outline-none focus:border-black transition-colors placeholder-transparent" placeholder="Nombre">
+                    <label for="name" class="absolute left-0 -top-3.5 text-xs text-neutral-500 transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-neutral-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-xs peer-focus:text-black">Nombre Completo</label>
+                </div>
+                <div class="relative">
+                    <input type="email" id="email" class="peer w-full border-b border-neutral-300 py-2 focus:outline-none focus:border-black transition-colors placeholder-transparent" placeholder="Email">
+                    <label for="email" class="absolute left-0 -top-3.5 text-xs text-neutral-500 transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-neutral-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-xs peer-focus:text-black">Correo Electrónico</label>
+                </div>
+            </div>
+
+            <div>
+                <p class="text-xs uppercase tracking-widest text-neutral-500 mb-4">Estoy interesado en:</p>
+                <div class="flex gap-6">
+                    <label class="flex items-center cursor-pointer gap-2 group">
+                        <input type="checkbox" class="accent-black w-4 h-4">
+                        <span class="text-sm group-hover:underline decoration-1 underline-offset-4">Comprar</span>
+                    </label>
+                    <label class="flex items-center cursor-pointer gap-2 group">
+                        <input type="checkbox" class="accent-black w-4 h-4">
+                        <span class="text-sm group-hover:underline decoration-1 underline-offset-4">Vender</span>
+                    </label>
+                    <label class="flex items-center cursor-pointer gap-2 group">
+                        <input type="checkbox" class="accent-black w-4 h-4">
+                        <span class="text-sm group-hover:underline decoration-1 underline-offset-4">Avalúo</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="relative">
+                <textarea id="message" rows="1" class="peer w-full border-b border-neutral-300 py-2 focus:outline-none focus:border-black transition-colors placeholder-transparent resize-none h-24" placeholder="Mensaje"></textarea>
+                <label for="message" class="absolute left-0 -top-3.5 text-xs text-neutral-500 transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-neutral-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-xs peer-focus:text-black">¿Cómo podemos ayudarle?</label>
+            </div>
+
+            <div class="text-center pt-8">
+                <button type="button" class="bg-neutral-900 text-white px-12 py-4 text-xs font-bold uppercase tracking-[0.2em] hover:bg-neutral-800 transition-all transform hover:-translate-y-1 shadow-xl">
+                    Enviar Solicitud
+                </button>
+            </div>
+        </form>
+    </div>
+  </section>
+
+    <footer id="contact" class="bg-black text-white py-20 px-6 md:px-12">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-4xl md:text-5xl font-serif italic mb-6">¿Listo para tu nuevo espacio?</h2>
+                <p class="text-neutral-400 mb-8 max-w-md">Agenda una visita privada o recibe asesoría personalizada para encontrar el espacio que define tu estilo de vida.</p>
+                <a href="https://wa.me/2281403710" class="inline-block bg-white text-black px-8 py-4 text-xs tracking-widest uppercase font-bold hover:bg-neutral-200 transition-colors">
+                    Contactar por WhatsApp
+                </a>
+            </div>
+            <div class="text-right flex flex-col items-end gap-16 text-neutral-500 text-xs tracking-widest uppercase">
+              <div>
+                 <p>Designed by NEUTRA</p>
+                 <p>© 2026 Vanguard Real Estate</p>
+                </div>
+                <div class="flex flex-col gap-8 text-white font-bold text-[16px]">
+                  <a href=""><i class=" hover:text-gray-500">FACEBOOK</i></a>
+                  <a href=""><i class=" hover:text-gray-500">INSTAGRAM</i></a>
+                  <a href=""><i class=" hover:text-gray-500">YOUTUBE</i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+  </body>
+</html>
